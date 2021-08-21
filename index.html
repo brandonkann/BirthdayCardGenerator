@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #4169E1; 
+        color: white;
+        text-align:center; 
+        padding-top: 50px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+      }
+
+      input {
+        border: none;
+        height: 30px;
+        width: 250px; 
+        text-align: center; 
+        color: purple;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 10px;
+      }
+
+      ::placeholder {
+        color: purple;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+      }
+
+      .button1 {
+        height: 30px;
+        width: 100px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: purple;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+      }
+
+      .button1:hover {
+        background-color: rgb(186, 147, 223);
+      }
+      
+
+
+    </style>
+  </head>
+    <body>
+      <h1>Happy Birthday Card Generator</h1>   
+      <input id = "month" placeholder ="Month of your Birthday"/>
+      <p></p>
+      <input id = "day" placeholder ="Day of your Birthday"/>
+      <p></p>
+      <button onclick = "getBirthday()" class = "button1">Generate</button>
+
+      <h1 id = "birthday"></h1>
+      <script src= "index.js"></script>
+    </body>
+</html>
