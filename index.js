@@ -47,10 +47,37 @@ var NumberOfGrandma = 2;
 function getBirthday() {
     console.log("Get Birthday!!!.....");
     var month = document.getElementById("month").value;
+    var day = document.getElementById("day").value;
+    // July, April, December, May 
     console.log(month); 
+    if (month == "July" && day == "11") {
+        document.getElementById("birthday").innerHTML = month + "!, you are a really special child"
+    }
+    else if (month == "January" || month == "Febuary") {
+        document.getElementById("birthday").innerHTML = month + "!, you are a winter baby"
+    }
+    else if (month == "April" || month == "May") {
+        document.getElementById("birthday").innerHTML = month + "!, you are a spring child"
+    }
+    else if (month == "September" || month == "October") {
+        document.getElementById("birthday").innerHTML = month + "!, you are a fall child"
+    }
+   else if (month == "July" || month == "December") {
+        document.getElementById("birthday").innerHTML =  month + " is a lucky month!"
+   }
+
+    else {
+        document.getElementById("birthday").innerHTML = "Confirm the Birthday is on " + month + " " + day;  
+    }
+
+
+
+
+
+
 
     var day = document.getElementById("day").value;
     console.log(day);
 
-    document.getElementById("birthday").innerHTML = "Confirm the Birthday is on " + month + " " + day;  
+    
 }

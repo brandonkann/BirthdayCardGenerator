@@ -1,0 +1,42 @@
+Javascript:
+
+&& and
+|| or
+!= Not 
+
+
+
+John == 50
+
+	  T          T
+if (John > 18 && John > 30) {
+	True
+}
+else {
+
+	False
+}
+
+							Boolean Logic 
+        TRUTH TABLES (&&):
+Statement 1  && Statement 2:
+     F              F           == F
+     F              T           == F
+     T              F           == F 
+     T              T           == T 
+
+var myGrandma = "Vegitarian"
+
+if (myGrandma == "Vegitarian" || myGrandma == "pescetarianism") {
+	True
+}
+else {
+	False
+}
+
+
+Statement 1 || Statement 2:
+     F              F           == False 
+     F              T           == True
+     T              F           == True
+     T              T           == True
