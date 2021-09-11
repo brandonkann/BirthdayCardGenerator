@@ -3,7 +3,7 @@
   <head>
     <style>
       body {
-        background-color: #4169E1; 
+        background-color:  rgb(186, 147, 223);
         color: white;
         text-align:center; 
         padding-top: 50px;
@@ -14,6 +14,14 @@
         border: none;
         height: 30px;
         width: 250px; 
+        text-align: center; 
+        color: purple;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 10px;
+      }
+
+      textarea {
+        border: none;
         text-align: center; 
         color: purple;
         font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -37,7 +45,16 @@
       }
 
       .button1:hover {
-        background-color: rgb(186, 147, 223);
+        background-color: #4169E1; 
+      }
+
+      .prepare {
+        background-color:rgb(186, 147, 223);
+  
+      }
+
+      .card {
+        display: none;
       }
       
 
@@ -45,14 +62,29 @@
     </style>
   </head>
     <body>
-      <h1>Happy Birthday Card Generator</h1>   
-      <input id = "month" placeholder ="Month of your Birthday"/>
-      <p></p>
-      <input id = "day" placeholder ="Day of your Birthday"/>
-      <p></p>
-      <button onclick = "getBirthday()" class = "button1">Generate</button>
+      <div id = "prepare">
+        <h1>Happy Birthday Card Generator</h1>   
+        <input id = "firstName" placeholder ="Whats your First Name"/>
+        <p></p>
+        <input id = "lastName" placeholder ="Whats your Last Name"/>
+        <p></p>
+        <input id = "month" placeholder ="Month of your Birthday"/>
+        <p></p>
+        <input id = "day" placeholder ="Day of your Birthday"/>
+        <p></p>
+        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Add your Birthday Message:</p>
+        <textarea placeholder = "Add your Birthday Message" id="message" name="message" rows="10" cols="50">
+        </textarea>
+        <p></p>
+        <button onClick = "getBirthday()" class = "button1">Generate</button>
+      </div>
 
-      <h1 id = "birthday"></h1>
       <script src= "index.js"></script>
+
+      <div id = "card" class = "card">
+        <h1 id = "cardName"></h1>
+        <img style = "width: 300px; height: 300px" src = "balloons.png"/>
+        <h4 id = "birthday"></h4>
+      </div>
     </body>
 </html>

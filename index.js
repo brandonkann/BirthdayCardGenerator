@@ -45,9 +45,15 @@ var NumberOfGrandma = 2;
 
 
 function getBirthday() {
+    document.getElementById("prepare").style.display = "none";
+    document.getElementById("card").style.display = "block";
+    
     console.log("Get Birthday!!!.....");
     var month = document.getElementById("month").value;
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
     var day = document.getElementById("day").value;
+    document.getElementById("cardName").innerHTML = "Happy Birthday" + " " + firstName + " " + lastName
     // July, April, December, May 
     console.log(month); 
     if (month == "July" && day == "11") {
