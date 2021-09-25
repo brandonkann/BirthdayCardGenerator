@@ -43,16 +43,25 @@ var NumberOfGrandma = 2;
 // Syntax:
 // function _NameOfTheFunction_() { block of code is inside here }
 
+// Global Variables: 
+var message; 
+var month;
+var firstName;
+var lastName;
+var day; 
 
 function getBirthday() {
     document.getElementById("prepare").style.display = "none";
     document.getElementById("card").style.display = "block";
     
     console.log("Get Birthday!!!.....");
-    var month = document.getElementById("month").value;
-    var firstName = document.getElementById("firstName").value;
-    var lastName = document.getElementById("lastName").value;
-    var day = document.getElementById("day").value;
+    message = document.getElementById("message").value;
+    month = document.getElementById("month").value;
+    firstName = document.getElementById("firstName").value;
+    lastName = document.getElementById("lastName").value;
+    day = document.getElementById("day").value;
+    console.log(message)
+    document.getElementById("birthdaymessage").innerHTML = message
     document.getElementById("cardName").innerHTML = "Happy Birthday" + " " + firstName + " " + lastName
     // July, April, December, May 
     console.log(month); 
@@ -86,4 +95,17 @@ function getBirthday() {
     console.log(day);
 
     
+}
+
+function goback() {
+    document.getElementById("prepare").style.display = "block";
+    document.getElementById("card").style.display = "none";
+
+    document.getElementById("message").value = message;
+    document.getElementById("month").value = month;
+    document.getElementById("firstName").value = firstName;
+    document.getElementById("lastName").value = lastName;
+    document.getElementById("day").value = day;
+
+
 }
