@@ -50,6 +50,8 @@ var firstName;
 var lastName;
 var day; 
 
+
+
 function getBirthday() {
     document.getElementById("prepare").style.display = "none";
     document.getElementById("card").style.display = "block";
@@ -61,6 +63,7 @@ function getBirthday() {
     lastName = document.getElementById("lastName").value;
     day = document.getElementById("day").value;
     console.log(message)
+    
     document.getElementById("birthdaymessage").innerHTML = message
     document.getElementById("cardName").innerHTML = "Happy Birthday" + " " + firstName + " " + lastName
     // July, April, December, May 
@@ -82,7 +85,7 @@ function getBirthday() {
    }
 
     else {
-        document.getElementById("birthday").innerHTML = "Confirm the Birthday is on " + month + " " + day;  
+        document.getElementById("birthday").innerHTML = "Your Birthday is on " + month + " " + day;  
     }
 
 
@@ -91,13 +94,12 @@ function getBirthday() {
 
 
 
-    var day = document.getElementById("day").value;
-    console.log(day);
-
     
 }
 
 function goback() {
+    console.log(day)
+    console.log(month)
     document.getElementById("prepare").style.display = "block";
     document.getElementById("card").style.display = "none";
 
